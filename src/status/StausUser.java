@@ -11,8 +11,24 @@ package status;
  */
 public class StausUser 
 {
-   public void statusDetail(String code)
-{
+    public enum state{ZERO,ONE,TWO,THREE};
+    private state s;
+
+    /**
+     * @return the s
+     */
+    public state getS() {
+        return s;
+    }
+
+    /**
+     * @param s the s to set
+     */
+    public void setS(state s) {
+        this.s = s;
+    }
+ public void statusDetail(String code)
+ {
 switch(code.toUpperCase())
         {
         case "ZERO": System.out.println("REJECTED");
